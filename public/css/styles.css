@@ -1,0 +1,589 @@
+:root {
+    --primary-color:        #00bcd4;
+    --white-color:          #ffffff;
+
+  }
+
+
+
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+a{
+  overflow: hidden;
+}
+
+
+
+
+
+.centered{
+  padding-top: 200px;
+  text-align: center;
+}
+
+
+/* navBar */
+
+/*
+.textoNav{
+  text-shadow: 2px 2px 2px black;
+} */
+
+.imagenNavBar{
+  visibility: hidden;
+}
+
+.icono{
+  color: white;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  margin: 0 18px;
+}
+
+.boton-barra{
+  margin: 0 18px;
+}
+
+/* .nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+} */
+
+
+/* Headings */
+
+.big-heading {
+  font-family: "Ubuntu";
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-family: Montserrat;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* .container{
+  padding: 20% 50%;
+} */
+
+/* Sections */
+
+.colored-section {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#principal {
+  color: #fff;
+  text-align: left;
+}
+
+#principal .container-fluid {
+  padding: 3% 15% 0;
+}
+
+
+/* .titulo-principal{
+  position: absolute;
+
+  font-family: 'Nanum Myeongjo', sans-serif;
+  line-height: 1.5;
+  font-size: 3em;
+  color: white;
+  text-shadow: 3px 3px black;
+  z-index: 1;
+  text-align: left;
+  margin: 20% 7% 0;
+} */
+
+.titulo-secundario{
+  font-family: "Montserrat";
+  font-size: 1.9rem;
+  line-height: 1.3;
+  color: #d6e0f0;
+}
+
+
+.hero {
+  position: relative;
+  padding: 5em 0;
+  overflow: hidden;
+}
+
+.hero-bg {
+  background: linear-gradient(170deg, var(--primary-color) 64%, var(--white-color) 30%);
+}
+
+.hero-image {
+  position: relative;
+  top: 2em;
+}
+
+
+
+/* .two{
+  background-color: #34ADFF;
+  background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+  min-height: 400px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Features Section */
+
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.7rem;
+}
+
+.feature-box {
+  padding: 3.5%;
+}
+
+.feature-text{
+  font-size: 1.2em;
+}
+
+.icon {
+  /* color: #0099ff; */
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+
+/* ideologia */
+
+
+.ideologia-texto{
+  font-size: 1.2em;
+}
+
+.ideologia-box{
+  padding: 1% 10% 5%;
+
+}
+
+
+
+
+
+/*  materias         */
+
+#materias{
+  padding: 3% 4% 5%;
+  margin: 2% 7% 7%;
+  border-radius: 0.5%;
+}
+
+.titulo-materias{
+  font-family: Montserrat;
+  color: #EDFDFF;
+  font-size: 2.6em;
+}
+
+.subtitulo-materias{
+  font-family: Montserrat;
+  color: #f1f3f8;
+  font-size: 1.4em;
+  padding: 20px 20px 20px;
+
+}
+
+.titulo-tarjeta{
+  color: black;
+}
+
+.card{
+  margin: 0 0 20px;
+}
+
+
+
+/* Testimonial Section */
+
+
+
+#testimonials {
+  margin: 2% 10% 4%;
+  background-color: #f4f4f4;
+  border: solid 5px #dbe3e5;
+
+}
+
+.testimonios {
+
+}
+
+.testimonio{
+  padding: 20px;
+  color: black;
+}
+
+.testimonial-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #0f4c75;
+}
+
+.testimonial-text-2 {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.testimonial-image {
+  width: 30%;
+  border-radius: 2%;
+  margin: 20px;
+}
+
+.testimonial-image:hover{
+  color: grey;
+  opacity: 90%;
+}
+
+
+
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+
+
+
+
+
+/* Pricing Section */
+
+#pricing {
+  padding: 2% 7% 3%;
+  margin: 0 0 5%;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.subtitulo-planes{
+  font-family: Montserrat;
+  color: #8d93ab;
+  font-size: 1.4em;
+  padding: 20px 20px 20px;
+}
+
+
+
+
+
+
+
+/* CTA Section */
+
+.precios-bg{
+  background-color: #00bcd4;
+  padding: 0 0 0;
+  margin: 0 0 0;
+  text-align: center;
+
+}
+
+
+/* Footer Section */
+
+#footer{
+  max-height: 100px;
+}
+
+.redes{
+  padding: 50px;
+}
+
+.social-icon {
+  margin: 20px 20px;
+}
+
+.social-icon:hover{
+  color:red;
+}
+
+
+
+/* paginas videos  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* navbar materia */
+
+
+
+/*  titulo-seccion materia */
+
+
+.titulo-materia{
+  margin: 50px 0 0;
+  background-color: #00bcd4;
+
+}
+
+.titulo-materia-texto{
+  color: white;
+}
+
+.icono-materia{
+  color: #005086;
+}
+
+/* .fondo-materia{
+  background-color: #f4f6ff;
+} */
+
+/* .div-completo{
+  background: #f1f3f8;
+} */
+
+
+
+/* PROGRESO */
+/*
+.seccion-progreso{
+  padding: 0 8%;
+} */
+
+.progreso-div{
+  margin:auto;
+  padding: 1.5% 14%;
+  background-color: #f1f3f8;
+  margin: 1% 14%;
+  border-radius: 2%;
+}
+
+.progreso{
+  margin: 0 0 40px;
+  color: #005086;
+  font-family: Montserrat;
+}
+
+.progress{
+  height: 20px;
+  margin: 10px;
+}
+
+.contenido{
+  margin: auto auto;
+}
+
+
+
+
+
+
+/* .seccion-video{
+  margin: 2% 5% 5%;
+  background-color: #f1f3f8;
+}
+
+.videos{
+  margin: 90px;
+}
+*/
+
+
+/*  COLLAPSABLE Y VIDEOS */
+
+
+.categorias{
+  text-align: left;
+  font-size: 1.3em;
+  margin: 2% 14%;
+  font-family: Montserrat;
+}
+
+.archivos{
+  background-color: #f1f3f8;
+  padding: 2% 14%;
+  margin: 0 14%;
+  border-radius: 2%;
+}
+
+
+.videos-miniatura{
+  height: 200px;
+  margin: 30px;
+}
+
+.titulo-videos{
+  color: #c70039;
+  text-align: center;
+  margin: 20px 0 0;
+  padding: 2% 0;
+  font-size: 1.3em;
+}
+
+.subtitulo-videos{
+  margin: 10px;
+}
+
+
+.collapsible {
+  padding: 0 5% 0;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* LOGIN- REGISTRO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+.login-register{
+  color: #1b262c;
+  padding: 7% 0 7%;
+  font-family: Montserrat;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+/* CONTACTOOOOO!!!!!!!!!!!!!!!!!!! */
+
+#contacto{
+  background: var(--primary-color);
+  padding: 5% 5% 5%;
+}
+
+.contacto{
+  padding: 0 0 3%;
+  font-size: 3em;
+  color: white;
+}
+
+.contacto-texto{
+  margin: 3% 0 0;
+  color: #f1f3f8;
+}
+
+/* NOSOTROS */
+
+
+#nosotros{
+  
+}
+
+
+
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+    width: 100%;
+  }
+}
