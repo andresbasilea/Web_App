@@ -1,6 +1,76 @@
 <%- include('partials/header') %>
 
-<h1>exito en login/registro</h1>
-<a class="btn btn-light btn-lg" href="/logout" role="button">Cerrar Sesión</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Agouti</a>
+
+  <form class="form-inline ml-auto">
+    <a class="btn btn-info my-2 my-sm-0" type="" href="perfil"><%=userName%> <i class="fas fa-user-md" style="color: #black"></i></a>  </form>
+    <a class="btn btn-danger my-2 my-sm-0 boton-barra" href="/logout" role="button">Cerrar Sesión</a>
+
+</nav>
+
+
+<%# <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Navbar</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav> %>
+
+
+<br />
+
+
+
+
+
+
+<%# <h1>exito en login/registro</h1> %>
+
+<h1 class="big-heading"><i class="fas fa-user-md fa-1.2x" style="color: #005086"></i> </h1>
+<h1 class="big-heading" data-aos="fade-in" data-aos-delay="900">Bienvenid@, <span style="color:#fa1616"><%=userName%>.</span></h1>
+
+
+
+
+<section class="white-section" id="features">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="feature-box col-lg-4 col-12" data-aos="fade-up" data-aos-delay="300">
+        <a href="/contenido"><i class="fas fa-microscope icon fa-4x"></i></a>
+        <%# <i class="fas fa-book-medical icon fa-4x"></i> %>
+        <h3 class="feature-title">Continuar las clases</h3>
+        <p class="feature-text">¡Ánimo!</p>
+      </div>
+
+      <div class="feature-box col-lg-4 col-12" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-brain icon fa-4x"></i>
+        <h3 class="feature-title">Quiz</h3>
+        <p class="feature-text">¡Pon a prueba tu conocimiento!</p>
+      </div>
+
+      <div class="feature-box col-lg-4 col-12" data-aos="fade-up" data-aos-delay="700">
+        <%# <i class="icon fas fa-heart fa-4x"></i> %>
+        <i class="fas fa-chalkboard-teacher fa-4x icon"></i>
+        <h3 class="feature-title">Tips y más</h3>
+        <p class="feature-text">¡Agouti te aconseja!</p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
 <%- include('partials/footer') %>

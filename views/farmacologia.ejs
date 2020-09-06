@@ -1,55 +1,29 @@
 <%- include('partials/header')%>
 
-<section class="white-section" id="navbar">
 
-    <!-- Nav Bar -->
+<section class="" id="navbar">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">Agouti</a>
-      <a href="" class="imagenNavBar"><i class="fas fa-stethoscope"></i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Nav Bar -->
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Aprende
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Anatomía</a>
-              <a class="dropdown-item" href="farmacologia">Farmacología</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Fisiología</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-success boton-barra my-2 my-sm-0" type="">Inicia Sesión</button>
-        </form>
-        <form class="form-inline my-2 boton-barra my-lg-0">
-          <button class="btn btn-primary my-2 my-sm-0" type="">Regístrate</button>
-        </form>
-      </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/exito">Agouti</a>
+
+    <form class="form-inline ml-auto">
+      <a class="btn btn-info my-2 my-sm-0" type="" href="/perfil"> <i class="fas fa-user-md" style="color: #black"></i></a>  </form>
+      <a class="btn btn-danger my-2 my-sm-0 boton-barra" href="/logout" role="button">Cerrar Sesión</a>
+
+  </nav>
 
 </section>
 
 
-  <!-- Title -->
+<!-- Title -->
 
-<section id= "title">
-  <div class="row div-completo">
+<section id="title">
+  <div class="row div-completo" data-aos="fade-right" data-aos-delay="200" data-aos-duration="300">
 
     <div class="col-lg-6 titulo-materia">
-      <h1 class="big-heading titulo-materia-texto"><u>Farma</u>cología. <i class="fas fa-prescription icono-materia"></i></h1>
+      <h1 class="big-heading titulo-materia-texto"><u>Farma</u>cología. <i class="fas fa-prescription icono-materia icon"></i></h1>
     </div>
     <div class="col-lg-6 fondo-materia">
 
@@ -62,42 +36,40 @@
 
 
 
+
 <!-- PROGRESO -->
 
 <br></br>
 <section class="white-section seccion-progreso" id="features">
 
-  <!-- <div class="container-fluid">
-
-    <div class="row">
-      <div class="feature-box col-lg-2">
-        <h3 class="feature-title progreso">0/10</h3>
-      </div>
-
-      <div class="feature-box col-lg-2">
-        <h3 class="feature-title progreso">3/28</h3>
-      </div>
-
-      <div class="feature-box col-lg-2">
-        <h3 class="feature-title progreso">5/7</h3>
-      </div>
-    </div>
-
-
-  </div> -->
-  <div class="">
+  <div class="" data-aos="fade-left" data-aos-delay="200" data-aos-duration="300">
     <div class="row progreso-div">
 
-      <div class="col-lg-6 contenido">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-2">
 
-        <p>50 videos disponibles.</p>
-        <p>20 lecciones en pdf.</p>
-        <p>34 hrs de contenido total.</p>
-
-
+          <div class="contenido">
+            <p class=""><b>1</b> sub-categoría</p>
+            <p><b>50</b> videos disponibles </p>
+          </div>
       </div>
-      <div class="col-lg-6">
-        <h1 class="progreso">Tu <em>progreso</em></h1>
+
+      <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+        <div class="contenido">
+          <p><b>8</b> lecciones en pdf</p>
+          <p><b>23</b> hrs de contenido total</p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+        <div class="contenido">
+          <a><i class="fas fa-brain icon fa-4x icono-quiz-pagina-videos"></i></a>
+          <p>¿Listo? <br />¡Quiz del módulo!</p>
+        </div>
+      </div>
+
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+        <h1 class="progreso">Tu <b>progreso</b> en farmacología</h1>
         <div class="progress">
           <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">VIDEOS 25%</div>
         </div>
@@ -137,72 +109,77 @@
 
 <!-- collapsable -->
 
-<h3 class="categorias">Categorías</h3>
+<h3 class="categorias" data-aos="fade-in">Categorías</h3 >
 
-<section class="archivos">
+<section class="archivos" data-aos="fade-up" data-aos-duration="1000">
 
 
-  <!-- <p>Videos:</p> -->
-  <button class="collapsible">Videos del tema.</button>
-  <div class="content">
-    <div class="row">
-      <br></br>
-      <div class="col-lg-6">
-        <p class="titulo-videos">¿Qué es la farmacología?</p>
-        <p class="subtitulo-videos">3:23 min.</p>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Referencias
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Guyton</a>
-            <a class="dropdown-item" href="#">Harrison</a>
-            <a class="dropdown-item" href="#">La Biblia</a>
+
+  <br />
+  <div>
+    <%# <button class="collapsible">Videos del tema.</button>
+    <div class="content">
+      <div class="row">
+        <br></br>
+        <div class="col-lg-6">
+          <p class="titulo-videos">¿Qué es la farmacología?</p>
+          <p class="subtitulo-videos">3:23 min.</p>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Referencias
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Guyton</a>
+              <a class="dropdown-item" href="#">Harrison</a>
+              <a class="dropdown-item" href="#">La Biblia</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <video class="videos-miniatura" src="../images/video1.mov" autoplay poster="posterimage.jpg">
+        <div class="col-lg-6">
+          <video class="videos-miniatura" src="../images/video1.mov" autoplay poster="posterimage.jpg">
 
-        </video>
+          </video>
+        </div>
+
       </div>
 
+    </div> %>
+
+    <%# <br></br>
+    <!-- <p>Lecturas: </p> -->
+    <br></br> %>
+    <button class="collapsible"> <b>Sección I</b>. Fundamentos de la farmacología. <i class="fas fa-video" style="color:white"></i>  <i class="fas fa-file-pdf " style="color:white"></i>  <i class="far fa-clock " style="color:white"></i></button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible"><b>Sección II</b>. Fármacos más utilizados.</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible"><b>Sección III</b>. Venta de fármacos en México.</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
-  </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
 
-  <br></br>
-  <!-- <p>Lecturas: </p> -->
-  <br></br>
-  <button class="collapsible">Sección I. Fundamentos de la farmacología.</button>
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
   </div>
-  <button class="collapsible">Sección II. Fármacos más utilizados.</button>
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
-  <button class="collapsible">Sección III. Venta de fármacos en México.</button>
-  <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  </div>
+  <!-- <p>Videos:</p> -->
 
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      });
-    }
-  </script>
 </section>
 
 
