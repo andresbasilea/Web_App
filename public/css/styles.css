@@ -55,13 +55,19 @@ a{
   font-weight: bold;
 }
 
-.nav-item {
+
+.nav-item{
   margin: 0 18px;
 }
 
 .boton-barra{
   margin: 0 18px;
 }
+
+
+
+
+
 
 /* .nav-link {
   font-size: 1.2rem;
@@ -121,7 +127,13 @@ a{
 
 #principal .container-fluid {
   padding: 3% 15% 0;
+
 }
+
+/*
+.img-principal{
+  box-shadow: 10px 5px 5px;
+} */
 
 
 /* .titulo-principal{
@@ -186,7 +198,8 @@ a{
 }
 
 .feature-title {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
+  font-family: Montserrat;
 }
 
 .feature-box {
@@ -364,7 +377,8 @@ a{
 }
 
 .redes{
-  padding: 50px;
+  padding: 5% 0 0;
+  font-size: 1.7em;
 }
 
 .social-icon {
@@ -400,6 +414,8 @@ a{
   color: #005086;
 }
 
+
+
 /* .fondo-materia{
   background-color: #f4f6ff;
 } */
@@ -418,28 +434,30 @@ a{
 
 .progreso-div{
   margin:auto;
-  padding: 1.5% 14%;
+  padding: 0.5% 0 0;
   background-color: #f1f3f8;
   margin: 1% 14%;
   border-radius: 2%;
 }
 
 .progreso{
-  margin: 0 0 40px;
+  font-size: 2em;
+  margin: 0 0 12px;
   color: #005086;
   font-family: Montserrat;
 }
 
 .progress{
-  height: 20px;
+  height: 10px;
   margin: 10px;
+  font-size: 0.6em;
 }
 
 .contenido{
-  margin: auto auto;
+  font-size: 0.8em;
+  padding: 8% 0 0;
+  margin: 10% 0 0;
 }
-
-
 
 
 
@@ -460,14 +478,14 @@ a{
 
 .categorias{
   text-align: left;
-  font-size: 1.3em;
+  font-size: 0.9em;
   margin: 2% 14%;
   font-family: Montserrat;
 }
 
 .archivos{
   background-color: #f1f3f8;
-  padding: 2% 14%;
+  padding: 2% 5%;
   margin: 0 14%;
   border-radius: 2%;
 }
@@ -492,8 +510,7 @@ a{
 
 
 .collapsible {
-  padding: 0 5% 0;
-  background-color: #777;
+  background-color: #00bcd4;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -501,11 +518,12 @@ a{
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 0.8em;
+  margin: 0 0 30px;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #ff4c68;
 }
 
 .collapsible:after {
@@ -569,21 +587,159 @@ a{
 
 
 #nosotros{
-  
+
 }
 
 
 
 
-@media (max-width: 1028px) {
 
-  #title {
-    text-align: center;
+
+/* PERFIL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+.progreso-perfil{
+  padding: 0 20% 1%;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+@media (max-width: 1000px) {
+
+  .navbar-brand{
+    font-size: 3em;
   }
 
-  .title-image {
+  .navbar-toggler{
+    font-size: 2.5em;
+  }
+
+  .nav-item{
+    font-size: 2em;
+  }
+
+  .boton-barra-texto{
+    font-size: 2em;
+
+  }
+
+  .boton-barra{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10% 0 0;
+    padding: 3% 0 0;
+  }
+
+
+
+  .hero {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .big-heading{
+    font-size: 5rem;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    margin: 4% 4% 0 0;
+    padding: 0 0 0;
+  }
+
+  .titulo-secundario{
+    font-size: 3.3rem;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    margin: auto;
+
+  }
+
+  /* .hero-text{
+    text-align: right;
+    align-items: left;
+    justify-content: left;
+  } */
+
+
+
+  /* .title-image {
     position: static;
     transform: rotate(0);
     width: 100%;
+  } */
+
+  .feature-title{
+    font-size: 2.5rem;
   }
+
+  .feature-text{
+    font-size: 2.5rem;
+  }
+
+  .container-fluid{
+
+    font-size: 2em;
+  }
+
+  .section-heading{
+    font-size: 4rem;
+  }
+
+  .subtitulo-materias{
+    font-size: 2rem;
+  }
+
+  .subtitulo-planes{
+    font-size: 2rem;
+  }
+
+  .card-header{
+    font-size: 2rem;
+  }
+
+  .card-body{
+    font-size: 2rem;
+  }
+
+  .boton-registro{
+    font-size: 1em;
+  }
+
+  #materias{
+    padding: 1% 2% 2%;
+    margin: 3% 0 5%;
+    /* border-radius: 0.5%; */
+  }
+
+
+  /* LOGIN */
+
+  .btn-ingreso{
+    font-size: 0.7em;
+  }
+
+  .card-google{
+    font-size: 0.7em;
+    padding: 1% 0 1%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

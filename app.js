@@ -8,7 +8,8 @@ const session = require('express-session');
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const FacebookStrategy = require('passport-facebook').Strategy;
+const TwitterStrategy = require('passport-twitter').Strategy;
+// const FacebookStrategy = require('passport-facebook').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
 // facebook LOGIN
@@ -26,7 +27,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(session({
-  secret: "Our little secret.",
+  secret: "El secreto oculto.",
   resave: false,
   saveUninitialized: false
 }));
@@ -75,30 +76,66 @@ passport.use(new GoogleStrategy({
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    console.log(profile);
+    //console.log(profile);
+    // console.log(profile.name.givenName);
 
     User.findOrCreate({
       googleId: profile.id,
-      username: profile.givenName
+      username: profile.givenName,
+      nombre: profile.name.givenName
     }, function(err, user) {
+      // console.log("Hola " + profile.name.givenName + "!");
       return cb(err, user);
     });
   }
 ));
 
-passport.use(new FacebookStrategy({
-    clientID: process.env.CLIENT_ID_FACEBOOK,
-    clientSecret: process.env.CLIENT_SECRET_FACEBOOK,
-    callbackURL: "http://localhost:3000/auth/facebook/agouti"
+
+// twitter STRATEGY
+
+passport.use(new TwitterStrategy({
+    consumerKey: process.env.TWITTER_CONSUMER_KEY,
+    consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+    callbackURL: "http://localhost:3000/auth/twitter/agouti"
   },
-  function(accessToken, refreshToken, profile, done) {
+  function(token, tokenSecret, profile, cb) {
     User.findOrCreate({
-      facebookId: profile.id
-    }, function(err, user) {
-      return done(err, user);
+       twitterId: profile.id
+       // username: profile.givenName,
+       // nombre: profile.name.givenName
+     }, function (err, user) {
+      return cb(err, user);
     });
   }
 ));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// passport.use(new FacebookStrategy({
+//     clientID: process.env.CLIENT_ID_FACEBOOK,
+//     clientSecret: process.env.CLIENT_SECRET_FACEBOOK,
+//     callbackURL: "http://localhost:3000/auth/facebook/agouti"
+//   },
+//   function(accessToken, refreshToken, profile, done) {
+//     User.findOrCreate({
+//       facebookId: profile.id
+//     }, function(err, user) {
+//       return done(err, user);
+//     });
+//   }
+// ));
 
 
 
@@ -110,6 +147,7 @@ passport.use(new FacebookStrategy({
 
 // APP GET
 
+// LOGINS
 
 app.get("/", function(req, res) {
   res.render("home");
@@ -127,23 +165,57 @@ app.get("/auth/google/agouti",
   }),
   function(req, res) {
     // Successful authentication, redirect to secrets.
+    // console.log(req.user.googleId);
     res.redirect("/exito");
   });
 
-app.get("/auth/facebook",
-  passport.authenticate('facebook', {
-    scope: ["profile"]
-  })
+
+
+app.get('/auth/twitter',
+  passport.authenticate('twitter'
+  // {  scope: ["profile"]}
+  )
 );
 
-app.get("/auth/facebook/agouti",
-  passport.authenticate('facebook', {
+app.get("/auth/twitter/agouti",
+  passport.authenticate('twitter', {
     failureRedirect: "/login"
   }),
   function(req, res) {
-    // Successful authentication, redirect to secrets.
+    // Successful authentication, redirect home.
     res.redirect("/exito");
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app.get("/auth/facebook",
+//   passport.authenticate('facebook', {
+//     scope: ["profile"]
+//   })
+// );
+//
+// app.get("/auth/facebook/agouti",
+//   passport.authenticate('facebook', {
+//     failureRedirect: "/login"
+//   }),
+//   function(req, res) {
+//     // Successful authentication, redirect to secrets.
+//     res.redirect("/exito");
+//   });
 
 app.get("/login", function(req, res) {
   res.render("login");
@@ -164,9 +236,18 @@ app.get("/contacto", function(req, res){
 });
 
 
-app.get("/exito", function(req, res) {
-  res.render("exito");
+app.get("/perfil", function(req,res){
+  res.render("perfil");
 });
+
+
+app.get("/contenido", function(req,res){
+  res.render("contenido");
+});
+
+
+
+
 
 // app.get("/images/video1.mp4",function(req,res){
 //   res.render("video1.mp4");
@@ -217,6 +298,10 @@ app.get("/farmacologia", function(req,res){
   res.render("farmacologia");
 });
 
+app.get("/farmacologia_preview", function(req,res){
+  res.render("farmacologia_preview");
+});
+
 app.get("/logout", function(req, res) {
   req.logout();
   res.redirect("/");
@@ -233,12 +318,41 @@ app.post("/register", function(req, res) {
       res.redirect("/register");
     } else {
       passport.authenticate("local")(req, res, function() {
+        // console.log(nombre);
         res.redirect("/exito");
       });
     }
   });
 
 });
+
+
+app.get("/exito", function(req, res){
+
+  if(req.isAuthenticated()){
+    console.log(req);
+    res.render("exito", {userName: req.user.nombre});
+  }else{
+    res.redirect("/login");
+  }
+});
+
+
+
+
+  // User.find({"name": {$ne: null}}, function(err, foundUsers){
+  //   if (err){
+  //     console.log(err);
+  //   } else {
+  //     if (foundUsers) {
+  //       res.render("exito", {usersList: foundUsers});
+  //     }
+  //   }
+  // });
+
+
+
+
 
 app.post("/login", function(req, res) {
 
@@ -250,6 +364,7 @@ app.post("/login", function(req, res) {
   req.login(user, function(err) {
     if (err) {
       console.log(err);
+      res.redirect("/login");
     } else {
       passport.authenticate("local")(req, res, function() {
         res.redirect("/exito");
@@ -260,7 +375,7 @@ app.post("/login", function(req, res) {
 });
 
 
-
+// module.exports = User;
 
 app.listen(3000, function() {
   console.log("Server started on port 3000.");
